@@ -132,7 +132,7 @@ $('.chooseBox-left').click(function(){
 	// console.log(baseData)
 	// console.log(targetNumber)
 	showTable();
-})
+});
 
 $('.chooseBox-right').click(function(){
 	baseData = [];
@@ -229,15 +229,15 @@ $('.chooseBox-right').click(function(){
 	// console.log(baseData)
 	// console.log(targetNumber)
 	showTable();
-})
+});
 var showTable = function(){
 	// console.log(baseData)
 	$.each(baseData,function(i,base){
 		var childBox = "";
-		childBox += "<div class='child'><ul>"+"<li>"+base[0]+"</li>"+"<li>"+base[1]+"</li>"+"<li>"+base[2]+"</li>"+"<li>"+base[3]+"</li>"+"<li>"+base[4]+"</li>"+"<li>"+base[5]+"</li>"+"</ul></div>"
+		childBox += "<div class='child'><ul>"+"<li>"+base[0]+"</li>"+"<li>"+base[1]+"</li>"+"<li>"+base[2]+"</li>"+"<li>"+base[3]+"</li>"+"<li>"+base[4]+"</li>"+"<li>"+base[5]+"</li>"+"</ul></div>";
 		$("#box").append(childBox);
-	})
-}
+	});
+};
 // showTable();
 var nowValue = 0;
 var timer = setInterval(function(){
@@ -248,7 +248,7 @@ var timer = setInterval(function(){
 		clearInterval(timer);
 	}
 	$('#progress').val(nowValue);
-},200)
+},200);
 
 
 var c = document.getElementById('canvas');
