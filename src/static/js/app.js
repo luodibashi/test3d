@@ -26,15 +26,15 @@ var AllData = [
 	[55,56,57,58,59,60],       //10
 	[61,62,63,64,65,66],       //11
 	[67,68,69,70,71,72]       //12
-]
+];
 var targetNumber = 1;
-console.log(targetNumber);
+// console.log(targetNumber);
 var baseData = [];
 // baseData.push()
 for(var i=0; i<6; i++){
 	baseData.push(AllData[i]);
 }
-console.log(baseData);
+// console.log(baseData);
 
 // 默认显示数据
 
@@ -129,8 +129,8 @@ $('.chooseBox-left').click(function(){
 			baseData.push(AllData[5]);
 		}
 	}
-	console.log(baseData)
-	console.log(targetNumber)
+	// console.log(baseData)
+	// console.log(targetNumber)
 	showTable();
 })
 
@@ -226,12 +226,12 @@ $('.chooseBox-right').click(function(){
 			baseData.push(AllData[6]);
 		}
 	}
-	console.log(baseData)
-	console.log(targetNumber)
+	// console.log(baseData)
+	// console.log(targetNumber)
 	showTable();
 })
 var showTable = function(){
-	console.log(baseData)
+	// console.log(baseData)
 	$.each(baseData,function(i,base){
 		var childBox = "";
 		childBox += "<div class='child'><ul>"+"<li>"+base[0]+"</li>"+"<li>"+base[1]+"</li>"+"<li>"+base[2]+"</li>"+"<li>"+base[3]+"</li>"+"<li>"+base[4]+"</li>"+"<li>"+base[5]+"</li>"+"</ul></div>"
@@ -239,3 +239,19 @@ var showTable = function(){
 	})
 }
 // showTable();
+var nowValue = 0;
+var timer = setInterval(function(){
+	nowValue+=1;
+	// console.log(nowValue);
+	if(nowValue===100){
+		nowValue = 0;
+		clearInterval(timer);
+	}
+	$('#progress').val(nowValue);
+},200)
+
+
+var c = document.getElementById('canvas');
+var ctx = c.getContext('2d');
+ctx.fillStyle = '#ff0000';
+ctx.fillRect(0,0,150,75);
